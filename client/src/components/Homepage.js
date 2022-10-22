@@ -1,11 +1,15 @@
 import React from 'react';
-import { Box, HStack } from '@chakra-ui/react';
+import { Box, HStack , Image} from '@chakra-ui/react';
 import BalanceCard from './ui/BalanceCard';
 import { RecentsCard } from './RecentsCard';
 import { MdAdd } from 'react-icons/md';
+
 const Homepage = () => {
   return (
     <Box>
+      <Box bgColor={"purple.900"}>
+        <Image src= "/assets/sim_ply-logo-light.png" id='logo'/>
+      </Box>
       <BalanceCard />
       <Box maxW="md" borderWidth="1px" borderRadius="sm" mt={3}>
         <HStack>
