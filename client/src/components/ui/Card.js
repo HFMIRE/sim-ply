@@ -1,43 +1,58 @@
 import React from 'react';
-import { Box, HStack } from '@chakra-ui/react';
+import { HStack } from '@chakra-ui/react';
 import { HiOutlineUserGroup } from 'react-icons/hi';
 import { AiOutlineUser } from 'react-icons/ai';
-export const Card = ({ iconType, name }) => {
-  const property = {
-    imageUrl: 'https://bit.ly/2Z4KKcF',
-    imageAlt: 'Rear view of modern home with pool',
-    title: 'Cowboy Bebop',
-    formattedPrice: '$1,900.00',
-  };
+
+import {
+  Heading,
+  Avatar,
+  Box,
+  Center,
+  Image,
+  Flex,
+  Text,
+  Stack,
+  Button,
+  useColorModeValue,
+} from '@chakra-ui/react';
+
+export default function Card({ iconType, name }) {
   return (
-    <Box
-      maxW="md"
-      borderWidth="1px"
-      borderRadius="sm"
-      overflow="hidden"
-      justifyContent={'center'}
-    >
-      <Box p={6}>
-        <HStack>
+    <Center py={6}>
+      <Box
+        maxW={'270px'}
+        w={'full'}
+        bg={useColorModeValue('white', 'gray.800')}
+        boxShadow={'2xl'}
+        rounded={'md'}
+        overflow={'hidden'}
+      >
+        <Stack spacing={0} align={'center'} mb={5}>
           {iconType === 'group' ? (
             <HiOutlineUserGroup size={30} />
           ) : (
             <AiOutlineUser size={30} />
           )}
-
-          <Box
-            mt="1"
-            fontWeight="semibold"
-            as="h4"
-            lineHeight="tight"
-            noOfLines={1}
-          >
+          <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
             {name}
-          </Box>
-        </HStack>
+          </Heading>
+          <Text color={'gray.500'}>£19, 0000</Text>
+        </Stack>
 
-        <Box>{property.formattedPrice}</Box>
+        <Button
+          w={'full'}
+          mt={8}
+          bg={useColorModeValue('#151f21', 'gray.900')}
+          color={'white'}
+          rounded={'md'}
+          _hover={{
+            transform: 'translateY(-2px)',
+            boxShadow: 'lg',
+          }}
+        >
+          See More
+        </Button>
       </Box>
-    </Box>
+    </Center>
   );
-};
+}

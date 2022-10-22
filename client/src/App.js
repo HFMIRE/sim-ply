@@ -9,7 +9,7 @@ function App() {
     <ChakraProvider theme={theme}>
       {/* <Layout> */}
       {/* <Homepage /> */}
-      <Activity/>
+      <Activity />
       {/* </Layout> */}
     </ChakraProvider>
   );
