@@ -1,46 +1,47 @@
 import {
-  HStack,
   FormControl,
-  Select,
   Box,
-  NumberInputField,
-  NumberInputStepper,
-  NumberIncrementStepper,
+  Stack,
   FormLabel,
-  NumberInput,
-  NumberDecrementStepper,
+  InputGroup,
+  FormHelperText,
+  Input,
+  InputLeftAddon,
+  Button,
 } from '@chakra-ui/react';
 import React from 'react';
 
 const TransactionForm = () => {
   return (
-    <Box maxW={'md'} overflow={'hidden'} justifyContent={'center'}>
-      <Box
-        p={4}
-        maxW={'xs'}
-        justifyContent={'center'}
-        borderWidth="1px"
-        borderRadius="lg"
-        bgColor={'purple.600'}
-      >
-        <FormControl color={'orange.100'}>
-          <FormLabel>Country</FormLabel>
-          <HStack>
-            <Select placeholder="Select country code" size="xs">
-              <option>United Arab Emirates</option>
-              <option>Nigeria</option>
-            </Select>
-            <FormLabel>Amount</FormLabel>
-            <NumberInput max={50} min={10} size="xs">
-              <NumberInputField />
-              <NumberInputStepper>
-                <NumberIncrementStepper />
-                <NumberDecrementStepper />
-              </NumberInputStepper>
-            </NumberInput>
-          </HStack>
+    <Box>
+      <Box p={4} gap={20}>
+        <FormControl color={'purple.700'}>
+          <InputGroup>
+            <InputLeftAddon children="USD" />
+            <Input type="number" placeholder="Amount" />
+          </InputGroup>
+
+          <InputGroup mt={5}>
+            <InputLeftAddon children="+234" />
+            <Input type="tel" placeholder="phone number" />
+          </InputGroup>
+
+          <FormLabel mt={5}>Email address</FormLabel>
+          <Input type="email" />
+          <FormHelperText>We'll never share your email.</FormHelperText>
         </FormControl>
       </Box>
+      <Stack spacing={6} direction={'row'} justifyContent={'center'} p={5}>
+        <Button
+          rounded={'full'}
+          px={6}
+          colorScheme={'purple'}
+          bg={'purple.400'}
+          _hover={{ bg: 'purple.500' }}
+        >
+          Submit
+        </Button>
+      </Stack>
     </Box>
   );
 };

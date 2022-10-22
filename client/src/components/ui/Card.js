@@ -1,15 +1,12 @@
 import React from 'react';
-import { HStack } from '@chakra-ui/react';
+
 import { HiOutlineUserGroup } from 'react-icons/hi';
 import { AiOutlineUser } from 'react-icons/ai';
 
 import {
   Heading,
-  Avatar,
   Box,
   Center,
-  Image,
-  Flex,
   Text,
   Stack,
   Button,

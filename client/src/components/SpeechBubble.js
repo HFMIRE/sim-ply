@@ -1,13 +1,9 @@
-import { ReactNode } from 'react';
 import {
   Box,
-  Button,
-  Flex,
   Heading,
   Text,
   Stack,
   Container,
-  Avatar,
   useColorModeValue,
 } from '@chakra-ui/react';
 
@@ -39,7 +35,8 @@ const TestimonialContent = ({ children }) => {
         bottom: '-16px',
         left: '50%',
         transform: 'translateX(-50%)',
-      }}>
+      }}
+    >
       {children}
     </Stack>
   );
@@ -58,12 +55,12 @@ const TestimonialText = ({ children }) => {
     <Text
       textAlign={'center'}
       color={useColorModeValue('gray.600', 'gray.400')}
-      fontSize={'sm'}>
+      fontSize={'sm'}
+    >
       {children}
     </Text>
   );
 };
-
 
 export default function SpeechBubbles() {
   return (
@@ -71,38 +68,28 @@ export default function SpeechBubbles() {
       <Container maxW={'7xl'} py={16} as={Stack} spacing={12}>
         <Stack
           direction={{ base: 'column', md: 'row' }}
-          spacing={{ base: 10, md: 4, lg: 10 }}>
+          spacing={{ base: 10, md: 4, lg: 10 }}
+        >
           <Testimonial>
             <TestimonialContent>
               <TestimonialHeading>User 1</TestimonialHeading>
-              <TestimonialText>
-                +£20
-              </TestimonialText>
+              <TestimonialText>+£20</TestimonialText>
             </TestimonialContent>
-          
           </Testimonial>
           <Testimonial>
             <TestimonialContent>
               <TestimonialHeading>User 2</TestimonialHeading>
-              <TestimonialText>
-             +£20
-              </TestimonialText>
+              <TestimonialText>+£20</TestimonialText>
             </TestimonialContent>
-         
           </Testimonial>
           <Testimonial>
             <TestimonialContent>
               <TestimonialHeading>User 1</TestimonialHeading>
-              <TestimonialText>
-               -£20
-              </TestimonialText>
+              <TestimonialText>-£20</TestimonialText>
             </TestimonialContent>
-        
           </Testimonial>
         </Stack>
       </Container>
-
-
     </Box>
   );
 }
