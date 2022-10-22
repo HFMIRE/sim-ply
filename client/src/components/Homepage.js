@@ -1,28 +1,14 @@
 import React from 'react';
-<<<<<<< Updated upstream
-import { Box, HStack , Image} from '@chakra-ui/react';
-=======
 import { Box, HStack, Button } from '@chakra-ui/react';
->>>>>>> Stashed changes
 import BalanceCard from './ui/BalanceCard';
 import { RecentsCard } from './RecentsCard';
 import { Stack, Container, Flex, Text, Heading } from '@chakra-ui/react';
 import { MdAdd } from 'react-icons/md';
-<<<<<<< Updated upstream
-=======
 import IconsOption from './ui/IconsOption';
->>>>>>> Stashed changes
 
 const Homepage = () => {
   return (
     <Box>
-<<<<<<< Updated upstream
-      <Box bgColor={"purple.900"}>
-        <Image src= "/assets/sim_ply-logo-light.png" id='logo'/>
-      </Box>
-      <BalanceCard />
-      <Box maxW="md" borderWidth="1px" borderRadius="sm" mt={3}>
-=======
       <Box bg={'gray.800'} position={'relative'}>
         <Flex
           flex={1}
@@ -84,7 +70,6 @@ const Homepage = () => {
         position={'relative'}
         p={10}
       >
->>>>>>> Stashed changes
         <HStack>
           <Button
             colorScheme={'purple'}
