@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, HStack, Button } from '@chakra-ui/react';
-
+import BalanceCard from './ui/BalanceCard';
 import { RecentsCard } from './RecentsCard';
 import { Stack, Container, Flex, Text, Heading } from '@chakra-ui/react';
 import { MdAdd } from 'react-icons/md';

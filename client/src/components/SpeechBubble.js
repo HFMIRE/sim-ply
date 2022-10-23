@@ -11,7 +11,7 @@ const Testimonial = ({ children }) => {
   return <Box>{children}</Box>;
 };
 
-const TestimonialContent = ({ children }) => {
+const TestimonialContentLeft = ({ children }) => {
   return (
     <Stack
       bg={useColorModeValue('white', 'gray.800')}
@@ -32,15 +32,49 @@ const TestimonialContent = ({ children }) => {
         borderTopWidth: 16,
         borderTopColor: useColorModeValue('white', 'gray.800'),
         pos: 'absolute',
-        bottom: '-16px',
-        left: '50%',
+        left: '-20px',
+        bottom:'10%',
         transform: 'translateX(-50%)',
+        transform:'rotate(90deg)',
       }}
     >
       {children}
     </Stack>
   );
 };
+
+const TestimonialContentRight = ({ children }) => {
+    return (
+      <Stack
+        bg={useColorModeValue('white', 'gray.800')}
+        boxShadow={'lg'}
+        p={8}
+        rounded={'xl'}
+        align={'center'}
+        pos={'relative'}
+        _after={{
+          content: `""`,
+          w: 0,
+          h: 0,
+          borderLeft: 'solid transparent',
+          borderLeftWidth: 16,
+          borderRight: 'solid transparent',
+          borderRightWidth: 16,
+          borderTop: 'solid',
+          borderTopWidth: 16,
+          borderTopColor: useColorModeValue('white', 'gray.900'),
+          pos: 'absolute',
+          right: '-20px',
+          bottom:'10%',
+          transform: 'translateX(-50%)',
+          transform:'rotate(270deg)',
+          
+        }}>
+        {children}
+      </Stack>
+    );
+  };
+  
 
 const TestimonialHeading = ({ children }) => {
   return (
@@ -52,13 +86,13 @@ const TestimonialHeading = ({ children }) => {
 
 const TestimonialText = ({ children }) => {
   return (
-    <Text
+    <Heading
       textAlign={'center'}
       color={useColorModeValue('gray.600', 'gray.400')}
       fontSize={'sm'}
     >
       {children}
-    </Text>
+    </Heading>
   );
 };
 
@@ -71,22 +105,31 @@ export default function SpeechBubbles() {
           spacing={{ base: 10, md: 4, lg: 10 }}
         >
           <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>User 1</TestimonialHeading>
-              <TestimonialText>+£20</TestimonialText>
-            </TestimonialContent>
+            <TestimonialContentLeft>
+              <TestimonialHeading>Mark</TestimonialHeading>
+              <TestimonialText>
+                +£20
+              </TestimonialText>
+            </TestimonialContentLeft>
+          
           </Testimonial>
           <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>User 2</TestimonialHeading>
-              <TestimonialText>+£20</TestimonialText>
-            </TestimonialContent>
+            <TestimonialContentRight>
+              <TestimonialHeading>Mary</TestimonialHeading>
+              <TestimonialText>
+             +£20
+              </TestimonialText>
+            </TestimonialContentRight>
+         
           </Testimonial>
           <Testimonial>
-            <TestimonialContent>
-              <TestimonialHeading>User 1</TestimonialHeading>
-              <TestimonialText>-£20</TestimonialText>
-            </TestimonialContent>
+            <TestimonialContentLeft>
+              <TestimonialHeading>Mark</TestimonialHeading>
+              <TestimonialText>
+               -£20
+              </TestimonialText>
+            </TestimonialContentLeft>
+        
           </Testimonial>
         </Stack>
       </Container>

@@ -41,9 +41,8 @@ export default function Activity() {
         textAlign={'center'}
         fontSize={'4xl'}
         py={10}
-        fontWeight={'bold'}
-      >
-        Current Savings Goal
+        fontWeight={'bold'}>
+        Church Funding
       </chakra.h1>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
         <StatsCard title={'Goal'} stat={'£3,000'} />

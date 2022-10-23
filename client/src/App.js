@@ -9,9 +9,9 @@ import TransactionPage from './components/TransactionPage';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Homepage />
+      {/* <Homepage /> */}
       <Activity />
-      <TransactionPage />
+      {/* <TransactionPage /> */}
     </ChakraProvider>
   );
 }
