@@ -10,8 +10,8 @@ export const RecentsCard = () => {
         </Heading>
       </Box>
 
-      <Card iconType="single" name="Naruto" />
-      <Card iconType="group" name="Cowboy Bebop" />
+      <Card iconType="single" name="Church Fundraising" />
+      <Card iconType="group" name="Phone Saving" />
     </Box>
   );
 };

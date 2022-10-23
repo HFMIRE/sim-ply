@@ -33,7 +33,9 @@ export default function Card({ iconType, name }) {
           <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
             {name}
           </Heading>
-          <Text color={'gray.500'}>£19, 0000</Text>
+          <Text fontSize={'xl'} color={'gray.900'}>
+            £1, 0000
+          </Text>
         </Stack>
 
         <Button
