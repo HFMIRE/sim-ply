@@ -7,7 +7,7 @@ const IconsOption = () => {
       <HStack>
         <Box p={7}>
           <VStack>
-            <Circle size="40px" bg="tomato" color="white">
+            <Circle size="40px" bg="purple" color="white">
               <MdCallReceived size={28} color="white" />
             </Circle>
             <Text> Send </Text>

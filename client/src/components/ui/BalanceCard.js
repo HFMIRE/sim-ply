@@ -6,7 +6,7 @@ const BalanceCard = () => {
     <Box maxW="md" overflow="hidden" backgroundColor={'purple.900'}>
       <Box p="6">
         <Box
-          color="orange.100"
+          color="purple.100"
           fontWeight="medium"
           letterSpacing="wide"
           fontSize="lg"
@@ -17,7 +17,7 @@ const BalanceCard = () => {
         </Box>
         <Box
           p={2}
-          color="red.200"
+          color="purple.200"
           fontWeight="semibold"
           letterSpacing="wide"
           fontSize="3xl"

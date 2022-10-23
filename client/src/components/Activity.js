@@ -11,7 +11,6 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-
 import SpeechBubbles from './SpeechBubble';
 
 function StatsCard(props) {
@@ -23,7 +22,8 @@ function StatsCard(props) {
       shadow={'xl'}
       border={'1px solid'}
       borderColor={useColorModeValue('gray.800', 'gray.500')}
-      rounded={'lg'}>
+      rounded={'lg'}
+    >
       <StatLabel fontWeight={'medium'} isTruncated>
         {title}
       </StatLabel>
@@ -41,37 +41,33 @@ export default function Activity() {
         textAlign={'center'}
         fontSize={'4xl'}
         py={10}
-        fontWeight={'bold'}>
+        fontWeight={'bold'}
+      >
         Current Savings Goal
       </chakra.h1>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
         <StatsCard title={'Goal'} stat={'£3,000'} />
         <StatsCard title={'Balance'} stat={'£1,000'} />
       </SimpleGrid>
-      
-      <Box>
-      <SpeechBubbles/>
-      </Box>
-      <Stack spacing={6} direction={'row'}  ml={5} p={5}>
-          <Button
-            rounded={'full'}
-            px={6}
-            colorScheme={'orange'}
-            bg={'orange.400'}
-            _hover={{ bg: 'orange.500' }}>
-            Add +
-          </Button>
-          <Button rounded={'full'} px={6}>
-            Withdraw -
-          </Button>
-        </Stack>
-<Box>
-  
-</Box>
 
-  
+      <Box>
+        <SpeechBubbles />
+      </Box>
+      <Stack spacing={6} direction={'row'} ml={5} p={5}>
+        <Button
+          rounded={'full'}
+          px={6}
+          colorScheme={'purple'}
+          bg={'purple.400'}
+          _hover={{ bg: 'purple.500' }}
+        >
+          Add +
+        </Button>
+        <Button rounded={'full'} px={6}>
+          Withdraw -
+        </Button>
+      </Stack>
+      <Box></Box>
     </Box>
   );
-
-  
 }

@@ -45,7 +45,7 @@ const Homepage = () => {
                   Your Avaliable Balance
                 </Heading>
                 <Text
-                  color={'orange.400'}
+                  color={'purple.400'}
                   fontWeight="semibold"
                   letterSpacing="wide"
                   fontSize="3xl"

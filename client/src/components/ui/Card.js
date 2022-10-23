@@ -39,7 +39,7 @@ export default function Card({ iconType, name }) {
         <Button
           w={'full'}
           mt={8}
-          bg={useColorModeValue('#151f21', 'gray.900')}
+          bg={useColorModeValue('purple.900', 'gray.900')}
           color={'white'}
           rounded={'md'}
           _hover={{
